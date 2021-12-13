@@ -1,0 +1,18 @@
+<div class="container solution">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>My solution :</h3>
+            <button class="btn btn-primary" (click)="showExplanationDetail()">Display Details</button>
+            <p *ngFor="let click of clicks; let i=index" [ngStyle]="{ backgroundColor:getBackgroundColor(i)} " [ngClass]="{whiteTextColor: i>=4}"> you clicked {{click }} times</p>
+        </div>
+        <div class="col-xs-12 ">
+            <h4>Explanation :</h4>
+            <p *ngIf="showExplanation">
+                In this exercise, I started by creating my Button and then my paragraph which represents the explanations of this exercise. <br> I initialized a property showExplanation to false then I placed a directive [ngIf] on my paragraph which is
+                displayed only when my property is true.<br> I placed an event (click) on my Button that triggers a function to change the state of my Boolean to its opposite.<br> I created a property of type array that I called clicksNumber, then modify
+                my function so that each time we click, a value is added to this array, this value corresponds to the size of my array +1, which gives me my number of click.<br> I then created a paragraph that displays each iteration of my table with
+                the *ngFor directive, I used the index to target from my 5th paragraph and be able to change the background color and the color of my text with the [ngStyle] and [ngClass] directives.<br>
+            </p>
+        </div>
+    </div>
+</div>
